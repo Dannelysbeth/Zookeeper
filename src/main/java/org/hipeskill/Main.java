@@ -130,11 +130,11 @@ public class Main {
         while(true) {
             System.out.println("Please enter the number of the habitat you would like to view: ");
             String option = scanner.next();
-            if (option == "exit"){
+            if (option.equals("exit")){
                 break;
             }
-            int optionNum = Integer.getInteger(option).intValue();
-            System.out.println(animals[(int) optionNum]);
+//            int optionNum = Integer.getInteger(option).intValue();
+            System.out.println(animals[Integer.parseInt(option)]);
 
         }
         System.out.println("See you later!");
