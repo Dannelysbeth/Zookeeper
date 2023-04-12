@@ -128,17 +128,15 @@ public class Main {
         String[] animals = {camel, lion, deer, goose, bat, rabbit};
         Scanner scanner = new Scanner(System.in);
         while(true) {
-            System.out.println("Please enter the number of the habitat you would like to view: ");
+            System.out.print("Please enter the number of the habitat you would like to view: ");
             String option = scanner.next();
             if (option.equals("exit")){
                 break;
             }
-//            int optionNum = Integer.getInteger(option).intValue();
-            System.out.println(animals[Integer.parseInt(option)]);
-
+            int index = Integer.parseInt(option);
+            String outputString = index >= animals.length ? "Index out of bound! Choose difrent number!" : animals[index];
+            System.out.println(outputString);
         }
         System.out.println("See you later!");
-
-        // write your code here
     }
 }
